@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Solver</title>
+    <script>
+        function throwError(message)
+        {
+            document.getElementById("usn").style.backgroundColor = "red";
+            document.getElementById("warnings").innerHTML += "<br></br>" + message
+        }
+        function isLetter(c) {
+            return c.toLowerCase() != c.toUpperCase();
+          }
+        function isLowerCase(str)
+        {
+            return str == str.toLowerCase() &amp;&amp; str != str.toUpperCase();
+        }
+        function validate()
+        { 
+            document.getElementById("warnings").innerHTML = ""
+            var hasError = 0;
+            var usn = document.forms[0]["usn"].value;
+            if(usn.length != 10)
+            {
+                hasError=1;
+                throwError("Length should be 10")
+            }
+            if (usn.charAt(0) == " "){
+                hasError=1;
+                throwError("no embedded spaces allowed")
+            }
+            {
+                let firstint = parseInt(usn.charAt(0))
+                if(firstint &lt; 1 || firstint &gt; 4)
+                {
+                    hasError=1;
+                    throwError("first character should be a number _between_ 1 and 4");
+                }   
+            }
+            if(!isLetter(usn.charAt(1)) || !isLetter(usn.charAt(2)))
+            {
+                hasError=1;
+                throwError("character at second and third positions must be upper case")
+            }
+            if(isLowerCase(usn.charAt(1)) || isLowerCase(usn.charAt(1)))
+            {
+                hasError=1;
+                throwError("character at second and third positions must be upper case")
+            }
+            if(hasError == 0) 
+            {
+                document.getElementById("usn").style.backgroundColor = "green";
+                document.getElementById("warnings").innerHTML = ""
+            }            
+        }
+    </script>
+</head> 
+<body>
+    <form id = "myform">
+        <label for="usn"> USN:</label>
+        <input type="text" name ="usn" id ="usn" onchange="validate()"></input>
+        <p id = "warnings" style="color: red;"></p>
+    </form>
+</body>

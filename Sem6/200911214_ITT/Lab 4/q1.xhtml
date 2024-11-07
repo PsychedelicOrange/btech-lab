@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Solver</title>
+    <script>
+        function doOnLoad()
+        {
+            let integer = window.prompt("Enter an integer",0);
+            const arr = [];
+            for(let i=0;i &lt; integer;i++)
+            {
+                if( i==0 || i==1)
+                {
+                    arr.push(1);
+                }
+                else{
+                    arr.push(arr[i-1]+arr[i-2]);
+                }
+            }
+            window.alert(arr)
+            doQ2()
+        }
+        function doQ2()
+        {
+            let integer2 = window.prompt("Enter an integer again",0);
+            const arr = [];
+            var table = document.createElement("table");
+            
+            for(let i=0;i &lt; integer2;i++)
+            {
+                let row = document.createElement("tr");
+                let number = document.createElement("td"); number.innerHTML = i;
+                let numbersquared = document.createElement("td"); numbersquared.innerHTML = i^2;
+                row.appendChild(number)
+                row.appendChild(numbersquared)
+                table.appendChild(row)
+            }
+            document.body.appendChild(table);
+        }
+    </script>
+</head>    
+<body onload="doOnLoad()">
+
+</body>
+</html>    

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>ParkingLot</title>
+        <script>
+            function calculateCharges(hours)
+            {
+                if(hours<=3)
+                {
+                    return 2
+                }
+                else
+                {
+                    return 2 + 0.5(hours-3)
+                }
+            }
+            function submitClick()
+            {
+                var customer = document.createElement("li");
+                customer.innerHTML = `${document.getElementById("name").value},${document.getElementById("hours").value} hour/s`
+                var list = document.getElementById("list")
+                list.append(customer)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>calculateCharges</h1>
+        <input type="number" id="hours">
+        <input type="text" id="name">
+        <input type="button" value="Submit" id="Submit" onclick="submitClick()">
+        <br>
+        <h1>Previous Customers</h1>
+        <ul id="list">
+            
+        </ul>
+    </body>
+</html>

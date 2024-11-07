@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .reply{
+            margin-left: 20px;
+        }
+        .audio-holder{
+            display: grid;
+            grid-template-areas: "details title interaction" 
+                                 "details player interaction";
+            grid-template-columns: 3fr 15fr 1fr;
+            gap: 1px;
+            border-radius: 10px;
+        }
+        .audio-holder-list{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .audio-holder--hascomments{
+            background-color: gainsboro;
+            box-shadow: 5px 10px gainsboro;
+        }
+        .audio-details{
+            grid-area: details;
+            background-color: aliceblue;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .audio-user{
+            font-size: larger;
+            
+        }
+        .audio-title{
+            grid-area: title;
+            font-size: larger;
+            background-color: aliceblue;
+            border: 1px black solid;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: 0cm;
+        }
+        .audio-player{
+            grid-area: player;
+            border: 1px black solid;
+            background-color: aliceblue;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top: 0cm;
+        }
+        .audio-interaction{
+            grid-area: interaction;
+            background-color: aliceblue;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .content{
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        img{
+            vertical-align: middle;
+            max-width: 35px;
+            height: auto;
+        }
+        .audio-timestamp{
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-holder-list">
+    <div class="audio-holder audio-holder--hascomments">
+        <div class="audio-details">
+            <div class="audio-user">
+                <img class="dp" src="dp.png" alt="profile picture">
+                User_apple_banana#3123
+            </div>
+            <br>
+            <div class="audio-timestamp">
+                12:34 AM, Thursday, March 23, 2023
+            </div>
+        </div>
+        <div class="audio-title">
+            Introduction to epiphany!
+        </div>
+        <div class="audio-player">
+            <audio controls style="width: 100%;">
+                <source src="test.mp3" type="mp3"> 
+            </audio>
+        </div>
+        <div class="audio-interaction">
+            <img height="35px" width="35px" src="like.png" alt="like">62.4k<br><img height="35px" width="35px" src="comment.png" alt="comment">0
+        </div>
+    </div>
+    <div class="reply">
+    <div class="audio-holder ">
+        <div class="audio-details">
+            <div class="audio-user">
+                <img class="dp" src="dp.png" alt="profile picture">
+                Forbidden_vegetable#2459
+            </div>
+            <br>
+            <div class="audio-timestamp">
+                12:34 AM, Thursday, March 23, 2023
+            </div>
+        </div>
+        <div class="audio-title">
+            My first post || views on the platform || what next?
+        </div>
+        <div class="audio-player">
+            <audio controls style="width: 100%;">
+                <source src="test.mp3" type="mp3"> 
+            </audio>
+        </div>
+        <div class="audio-interaction">
+            <img height="35px" width="35px" src="like.png" alt="like">10k<br><img height="35px" width="35px" src="comment.png" alt="comment">5k
+        </div>
+    </div>
+    <div class="audio-holder audio-holder--hascomments ">
+        <div class="audio-details">
+            <div class="audio-user">
+                <img class="dp" src="dp.png" alt="profile picture">
+                Forbidden_vegetable#2459
+            </div>
+            <br>
+            <div class="audio-timestamp">
+                12:34 AM, Thursday, March 23, 2023
+            </div>
+        </div>
+        <div class="audio-title">
+            My first post || views on the platform || what next?
+        </div>
+        <div class="audio-player">
+            <audio controls style="width: 100%;">
+                <source src="test.mp3" type="mp3"> 
+            </audio>
+        </div>
+        <div class="audio-interaction">
+            <img height="35px" width="35px" src="like.png" alt="like">10k<br><img height="35px" width="35px" src="comment.png" alt="comment">5k
+        </div>
+    </div>
+    <div class="reply">
+    <div class="audio-holder ">
+        <div class="audio-details">
+            <div class="audio-user">
+                <img class="dp" src="dp.png" alt="profile picture">
+                Forbidden_vegetable#2459
+            </div>
+            <br>
+            <div class="audio-timestamp">
+                12:34 AM, Thursday, March 23, 2023
+            </div>
+        </div>
+        <div class="audio-title">
+            My first post || views on the platform || what next?
+        </div>
+        <div class="audio-player">
+            <audio controls style="width: 100%;">
+                <source src="test.mp3" type="mp3"> 
+            </audio>
+        </div>
+        <div class="audio-interaction">
+            <img height="35px" width="35px" src="like.png" alt="like">10k<br><img height="35px" width="35px" src="comment.png" alt="comment">5k
+        </div>
+    </div>
+</div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Game of high and low</title>
+        <script>
+            var num;
+            function generateNum()
+            {
+                // Returns a random integer from 1 to 15:
+                num = 1 + Math.floor(Math.random() * 15); 
+            }
+            function evaluateGuess()
+            {
+                var guess = document.getElementById("guess").value
+                var hint = document.getElementById("hint")
+                if(guess > num)
+                {
+                    hint.innerHTML = "Too High"
+                }
+                if(guess < num)
+                {
+                    hint.innerHTML = "Too Low"
+                }
+                if(guess == num)
+                {
+                    hint.innerHTML = "You Got it "
+                }
+            }
+        </script>
+    </head>
+    <body onload="generateNum()">
+        <input type="text" id="guess">
+        <input type="button" id="submit" value ="submit" onclick="evaluateGuess()"><br>
+        <textarea id="hint"></textarea>
+    </body>
+</html>

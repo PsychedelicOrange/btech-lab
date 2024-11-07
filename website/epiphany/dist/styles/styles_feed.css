@@ -1,0 +1,122 @@
+body{
+    grid-template-columns: 1fr 5fr;
+}
+.audio-holder-list{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.audio-holder{
+    display: grid;
+    grid-template-areas: "details title interaction" 
+                         "details player interaction";
+    grid-template-columns: 3fr 15fr 1fr;
+    gap: 1px;
+    border-radius: 10px;
+}
+.audio-holder-new{
+    display: grid;
+    grid-template-areas: "player player" 
+                         "details interaction";
+    grid-template-columns: 5fr 1fr;
+    gap: 1px;
+    border: 1px grey solid;
+    border-radius: 10px;
+}
+.audio-holder-new:hover{
+    box-shadow: 0 0.5px 4px rgba(128, 128, 128, 0.8);
+}
+.audio-details{
+    padding-left: 25px;
+    grid-area: details;
+    display: grid;
+    grid-template-areas: "title user timestamp";
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.audio-timestamp{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    grid-area: timestamp;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    text-align: center;
+}
+.audio-user{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    grid-area: user;
+    text-align: center;
+    /* font-size: small; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.audio-title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    grid-area: title;
+    /* font-size: larger; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.audio-player{
+    grid-area: player;
+}
+.audio-interaction{
+    grid-area: interaction;
+    text-align: end;
+}
+.content{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.reply{
+    margin-left: 20px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .brand{
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 1000;
+    font-size: 48px;
+  }
+  #navbar {
+    background-color: rgb(0, 0, 0); /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    z-index: 10;
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    height: 75px;
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+  #navbar_content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+.search_section
+{
+    display: flex;
+    justify-content: space-between;
+}
